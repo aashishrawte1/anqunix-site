@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import styles from './Header.module.css';
 
 export function Header() {
@@ -13,7 +12,7 @@ export function Header() {
     return (
         <header className={styles.header}>
             <h1 className={styles.logo}>Anqunix.</h1>
-            <div className={styles.hamburger} onClick={toggleMenu}>
+            {/* <div className={styles.hamburger} onClick={toggleMenu}>
                 <div></div>
                 <div></div>
                 <div></div>
@@ -24,11 +23,10 @@ export function Header() {
                         <Link to="/" className={styles.menu_link}>Home</Link>
                     </li>
                     <li className={styles.menu_item}>
-                        {/* change router name to contact instead of contact-us when done */}
-                        <Link to="/contact-us" className={styles.menu_link}>Contact</Link>
+                        <Link to="/contact" className={styles.menu_link}>Contact</Link>
                     </li>
                 </ul>
-            </div>
+            </div> */}
         </header>
     )
 }

@@ -1,0 +1,48 @@
+[debug] [2024-07-26T22:40:07.872Z] ----------------------------------------------------------------------
+[debug] [2024-07-26T22:40:07.873Z] Command:       /opt/homebrew/Cellar/node@18/18.20.3/bin/node /opt/homebrew/bin/firebase deploy
+[debug] [2024-07-26T22:40:07.873Z] CLI Version:   13.14.2
+[debug] [2024-07-26T22:40:07.873Z] Platform:      darwin
+[debug] [2024-07-26T22:40:07.874Z] Node Version:  v18.20.3
+[debug] [2024-07-26T22:40:07.874Z] Time:          Sat Jul 27 2024 04:10:07 GMT+0530 (India Standard Time)
+[debug] [2024-07-26T22:40:07.874Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-07-26T22:40:07.906Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-07-26T22:40:07.906Z] > authorizing via signed-in user (aashishrawte1@gmail.com)
+[debug] [2024-07-26T22:40:07.906Z] [iam] checking project anqunix-site for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-07-26T22:40:07.907Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/anqunix-site:testIamPermissions [none]
+[debug] [2024-07-26T22:40:07.908Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/anqunix-site:testIamPermissions x-goog-quota-user=projects/anqunix-site
+[debug] [2024-07-26T22:40:07.908Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/anqunix-site:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-07-26T22:40:09.586Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/anqunix-site:testIamPermissions 200
+[debug] [2024-07-26T22:40:09.587Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/anqunix-site:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-07-26T22:40:09.587Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/anqunix-site [none]
+[debug] [2024-07-26T22:40:10.438Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/anqunix-site 200
+[debug] [2024-07-26T22:40:10.439Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/anqunix-site {"projectId":"anqunix-site","projectNumber":"1079670519303","displayName":"anqunix-site","name":"projects/anqunix-site","resources":{"hostingSite":"anqunix-site"},"state":"ACTIVE","etag":"1_61fb1338-0441-4564-815d-3bdd7713e919"}
+[info] 
+[info] === Deploying to 'anqunix-site'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2024-07-26T22:40:10.444Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/anqunix-site/versions [none]
+[debug] [2024-07-26T22:40:10.444Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/anqunix-site/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2024-07-26T22:40:11.947Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/anqunix-site/versions 200
+[debug] [2024-07-26T22:40:11.947Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/anqunix-site/versions {"name":"projects/1079670519303/sites/anqunix-site/versions/00ca0a3cdf30e82b","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[anqunix-site]: beginning deploy... 
+[info] i  hosting[anqunix-site]: found 17 files in build 
+[debug] [2024-07-26T22:40:11.970Z] [hosting] uploading with 200 concurrency
+[debug] [2024-07-26T22:40:12.065Z] [hosting] hash cache [YnVpbGQ] stored for 17 files
+[debug] [2024-07-26T22:40:12.066Z] [hosting][hash queue][FINAL] {"max":90,"min":5,"avg":12.764705882352942,"active":0,"complete":17,"success":17,"errored":0,"retried":0,"total":17,"elapsed":93}
+[debug] [2024-07-26T22:40:12.066Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/1079670519303/sites/anqunix-site/versions/00ca0a3cdf30e82b:populateFiles [none]
+[debug] [2024-07-26T22:40:12.066Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/1079670519303/sites/anqunix-site/versions/00ca0a3cdf30e82b:populateFiles {"files":{"/robots.txt":"391d14b3c2f8c9143a27a28c7399585142228d4d1bdbe2c87ac946de411fa9a2","/asset-manifest.json":"c0bd4668a9efb296b7be163b379bd22e397f28d253b33543d5eec352a14eed41","/logo192.png":"caff018b7f1e8fd481eb1c50d75b0ef236bcd5078b1d15c8bb348453fee30293","/favicon.ico":"b72f7455f00e4e58792d2bca892abb068e2213838c0316d6b7a0d6d16acd1955","/logo512.png":"191fc21360b4ccfb1cda11a1efb97f489ed22672ca83f4064316802bbfdd750e","/manifest.json":"341d52628782f8ac9290bbfc43298afccb47b7cbfcee146ae30cf0f46bc30900","/static/js/main.e4e05a42.js.LICENSE.txt":"d45ad367e636a0eea6aa502d264fefd3cc4f1e26b730e44b2904eb3ae3910d79","/index.html":"9b1d6e40c45022a22ec0673caad4ab5fc70a17f4deb9385d6d3eb8afa5770810","/static/js/453.f251e29f.chunk.js.map":"1fc7bed9e7d8dce3bc52aeaf12144d55b40bbd3ab249d598dbccf84d2c202527","/static/js/453.f251e29f.chunk.js":"1e4abb4563197efb7ea09d6e67e1dd3622af5be852ce822a9c6ba6c43f5549e4","/static/css/main.aca05d80.css.map":"3e0d1359e6cf5e79288dbc27f6f72b12a54cb11062d71a6c409049e0106846dd","/static/css/main.aca05d80.css":"3de26eedc4a449d8d14b127eea3bee62b08869a535a3f9b81ecf636d11d97d8f","/static/media/clients.ea08e338bd48fe901279.png":"585ea7e876eca6e9c2d1d7f58e5f18f935738271496090416830990c48b6a29b","/static/media/Group.d65edca95abf26bdd9b1.png":"065a5ae1f21fce89d3d3bc27b3f17e16a167f651acd74a62c4cf9399a50f24da","/static/media/girl.e32709df8b3ea0e1cb6e.png":"03ebae385b36af8e279df52b27efd6d24b7c1906f0681e1934f00893d88b69a7","/static/js/main.e4e05a42.js":"a752e7e136f977a7505fb5cdc80597fbae134ebec7311aa13885c505f36c5c7c","/static/js/main.e4e05a42.js.map":"537c5185e19cafb4dbeb4ff22dd3a3335dceec07bb5f568e83fa2587f9522a6d"}}
+[debug] [2024-07-26T22:40:13.401Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/1079670519303/sites/anqunix-site/versions/00ca0a3cdf30e82b:populateFiles 200
+[debug] [2024-07-26T22:40:13.401Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/1079670519303/sites/anqunix-site/versions/00ca0a3cdf30e82b:populateFiles {"uploadRequiredHashes":["a752e7e136f977a7505fb5cdc80597fbae134ebec7311aa13885c505f36c5c7c","9b1d6e40c45022a22ec0673caad4ab5fc70a17f4deb9385d6d3eb8afa5770810","537c5185e19cafb4dbeb4ff22dd3a3335dceec07bb5f568e83fa2587f9522a6d","c0bd4668a9efb296b7be163b379bd22e397f28d253b33543d5eec352a14eed41","d45ad367e636a0eea6aa502d264fefd3cc4f1e26b730e44b2904eb3ae3910d79"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/anqunix-site/versions/00ca0a3cdf30e82b/files"}
+[debug] [2024-07-26T22:40:13.402Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/anqunix-site/versions/00ca0a3cdf30e82b/files/a752e7e136f977a7505fb5cdc80597fbae134ebec7311aa13885c505f36c5c7c [none]
+[debug] [2024-07-26T22:40:13.402Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/anqunix-site/versions/00ca0a3cdf30e82b/files/a752e7e136f977a7505fb5cdc80597fbae134ebec7311aa13885c505f36c5c7c [stream]
+[debug] [2024-07-26T22:40:13.403Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/anqunix-site/versions/00ca0a3cdf30e82b/files/9b1d6e40c45022a22ec0673caad4ab5fc70a17f4deb9385d6d3eb8afa5770810 [none]
+[debug] [2024-07-26T22:40:13.403Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/anqunix-site/versions/00ca0a3cdf30e82b/files/9b1d6e40c45022a22ec0673caad4ab5fc70a17f4deb9385d6d3eb8afa5770810 [stream]
+[debug] [2024-07-26T22:40:13.403Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/anqunix-site/versions/00ca0a3cdf30e82b/files/537c5185e19cafb4dbeb4ff22dd3a3335dceec07bb5f568e83fa2587f9522a6d [none]
+[debug] [2024-07-26T22:40:13.403Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/anqunix-site/versions/00ca0a3cdf30e82b/files/537c5185e19cafb4dbeb4ff22dd3a3335dceec07bb5f568e83fa2587f9522a6d [stream]
+[debug] [2024-07-26T22:40:13.403Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/anqunix-site/versions/00ca0a3cdf30e82b/files/c0bd4668a9efb296b7be163b379bd22e397f28d253b33543d5eec352a14eed41 [none]
+[debug] [2024-07-26T22:40:13.403Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/anqunix-site/versions/00ca0a3cdf30e82b/files/c0bd4668a9efb296b7be163b379bd22e397f28d253b33543d5eec352a14eed41 [stream]
+[debug] [2024-07-26T22:40:13.404Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/anqunix-site/versions/00ca0a3cdf30e82b/files/d45ad367e636a0eea6aa502d264fefd3cc4f1e26b730e44b2904eb3ae3910d79 [none]
+[debug] [2024-07-26T22:40:13.404Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/anqunix-site/versions/00ca0a3cdf30e82b/files/d45ad367e636a0eea6aa502d264fefd3cc4f1e26b730e44b2904eb3ae3910d79 [stream]
+[debug] [2024-07-26T22:40:13.404Z] [hosting][populate queue][FINAL] {"max":1337,"min":1337,"avg":1337,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1339}
+[debug] [2024-07-26T22:40:13.404Z] [hosting] uploads queued: 5
