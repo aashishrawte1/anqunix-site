@@ -13,7 +13,7 @@ export function Header() {
     return (
         <header className={styles.header}>
             {/* <h1 className={styles.logo}>Anqunix.</h1> */}
-            <img height={100} width={200} src={Logo} alt='logo'/>
+            <img height={100} width={250} src={Logo} alt='logo'/>
             {/* <div className={styles.hamburger} onClick={toggleMenu}>
                 <div></div>
                 <div></div>
