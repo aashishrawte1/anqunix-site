@@ -1,17 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
+import Logo from '../assets/images/logo.png';
 import styles from './Header.module.css';
 
 export function Header() {
-    const [menuOpen, setMenuOpen] = useState(false);
+    // const [menuOpen, setMenuOpen] = useState(false);
 
-    const toggleMenu = () => {
-        console.log('toggleMenu', menuOpen);
-        setMenuOpen(!menuOpen);
-    }
+    // const toggleMenu = () => {
+    //     console.log('toggleMenu', menuOpen);
+    //     setMenuOpen(!menuOpen);
+    // }
 
     return (
         <header className={styles.header}>
-            <h1 className={styles.logo}>Anqunix.</h1>
+            {/* <h1 className={styles.logo}>Anqunix.</h1> */}
+            <img height={100} width={200} src={Logo} alt='logo'/>
             {/* <div className={styles.hamburger} onClick={toggleMenu}>
                 <div></div>
                 <div></div>
