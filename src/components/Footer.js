@@ -7,7 +7,7 @@ import './Footer.css';
 export function Footer() {
     return (
         <div className='footer'>
-                <span className='copyright'>Copyright &copy; 2024. All right reserved.</span>
+                <span className='copyright'>Copyright &copy; 2025. All right reserved.</span>
                 <div className='social'>
                     <a href='#' target='_blank'><img alt='youtube' src={Youtube} /></a>
                     <a href='https://www.instagram.com/anqunix/' target='_blank'><img alt='instagram' src={Instagram} /></a>
